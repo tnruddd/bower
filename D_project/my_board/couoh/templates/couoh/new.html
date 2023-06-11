@@ -1,0 +1,19 @@
+{% comment %} 
+{% comment %} create {% endcomment %}
+ {% comment %} <form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="product">
+    <input type="text" name="customer_ID">
+    <input type="text" name="review_content">
+    <input type="text" name="star_score">
+    <input type="text" name="help_count">
+    <textarea name="body"></textarea>
+    <button type="submit">저장하기</button>
+</form>  {% endcomment %}
+
+{% comment %} # 폼 유효성 검사 {% endcomment %}
+ 
+{% comment %} <form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">저장하기</button>  {% endcomment %}

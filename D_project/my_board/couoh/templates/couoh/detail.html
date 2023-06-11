@@ -1,0 +1,8 @@
+ {% comment %} #객체: 조건에 부합하는 필드 하나 가져오기 {% endcomment %}
+{{details.title}} <!--객체 바로 접근--> 
+{{details.body}}
+
+
+{% comment %} delete  {% endcomment %}
+
+<a href="{% url 'delete' details.id%}" role="button">삭제하기</a> {% endcomment %}

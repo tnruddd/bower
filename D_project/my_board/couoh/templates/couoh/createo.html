@@ -1,0 +1,31 @@
+{%extends "./layout1.html"%}
+{% block contents%}
+  <div class="container">
+    <form action="{% url "couoh:ohoh"%}" method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="title" class="form-label">제목</label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="제목을 입력하세요">
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">본문</label>
+        <textarea class="form-control" name="content" id="content" rows="10"></textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-success">글 작성</button>
+    </form>
+  </div>
+
+  {%endblock%}
+
+
+  {% comment %} <div class="container mt-5">
+    <div class="mb-2 d-flex" style="flex-direction: row-reverse;">
+      <a href="{% url "couoh:ohoh"%}" class="btn btn-outline-success">냉장고</a>
+    </div>
+    <div>
+      <a href="{% url "couoh:ohoh"%}" class="btn btn-outline-success">세탁기</a>
+    </div>
+    <div>
+      <a href="{% url "couoh:ohoh"%}" class="btn btn-outline-success">타워</a>
+    </div>
+  </div> {% endcomment %}
